@@ -1,5 +1,4 @@
 # Executables
-bin/akmd
 bin/awb_camera
 bin/bma150_usr
 bin/lsc_camera
@@ -8,7 +7,7 @@ bin/rmt_storage
 # Audio
 etc/firmware/default.acdb
 etc/firmware/default_org.acdb
-etc/firmwrae/default_org_wb.acdb
+etc/firmware/default_org_wb.acdb
 lib/libaudioalsa.so
 lib/libhtc_acoustic.so
 
@@ -16,10 +15,23 @@ lib/libhtc_acoustic.so
 etc/firmware/bcm4330.hcd
 
 # Camera
-lib/libcamera.so
+lib/hw/camera.default.so
+lib/libcameraface.so
+lib/libcamerapp.so
 lib/libgemini.so
+lib/libmmcamera_rawchipproc.so
+lib/libmmipl.so
+lib/libmmjpeg.so
+lib/libmmosal.so
 lib/liboemcamera.so
 lib/libposteffect.so
+
+# Chromatix
+lib/libchromatix_s5k4e5yx_default_video.so
+lib/libchromatix_s5k4e5yx_hdr.so
+lib/libchromatix_s5k4e5yx_hfr.so
+lib/libchromatix_s5k4e5yx_hfr_4x.so
+lib/libchromatix_s5k4e5yx_preview.so
 
 # Graphics
 lib/egl/eglsubAndroid.so
@@ -45,9 +57,15 @@ etc/firmware/vidc_720p_vc1_dec_mc.fw
 etc/firmware/yamato_pfp.fw
 etc/firmware/yamato_pm4.fw
 
-# Media
-lib/libmmipl.so
-lib/libmmjpeg.so
+# Qualcomm libs
+lib/libdiag.so
+lib/libdsi_netctrl.so
+lib/libdsutils.so
+lib/libidl.so
+lib/libqdp.so
+lib/libqmi.so
 
 # Radio
 lib/libhtc_ril.so
+lib/libnetmgr.so
+lib/libqc-opt.so

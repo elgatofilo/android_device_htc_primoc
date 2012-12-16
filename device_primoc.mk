@@ -35,24 +35,24 @@ PRODUCT_COPY_FILES += \
 
 # Keylayouts and keychars
 PRODUCT_COPY_FILES += \
-    device/htc/primoc/prebuilt/usr/keychars/Generic.kcm:system/usr/keychars/Generic.kcm \
-    device/htc/primoc/prebuilt/usr/keychars/qwerty.kcm:system/usr/keychars/qwerty.kcm \
-    device/htc/primoc/prebuilt/usr/keychars/qwerty2.kcm:system/usr/keychars/qwerty2.kcm \
-    device/htc/primoc/prebuilt/usr/keychars/Virtual.kcm:system/usr/keychars/Virtual.kcm \
-    device/htc/primoc/prebuilt/usr/keylayout/himax-touchscreen.kl:system/usr/keylayout/himax-touchscreen.kl \
-    device/htc/primoc/prebuilt/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
-    device/htc/primoc/prebuilt/usr/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
-    device/htc/primoc/prebuilt/usr/keylayout/primoc-keypad.kl:system/usr/keylayout/primoc-keypad.kl \
-    device/htc/primoc/prebuilt/usr/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-    device/htc/primoc/prebuilt/usr/keylayout/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl
+    device/htc/primoc/keychars/Generic.kcm:system/usr/keychars/Generic.kcm \
+    device/htc/primoc/keychars/qwerty.kcm:system/usr/keychars/qwerty.kcm \
+    device/htc/primoc/keychars/qwerty2.kcm:system/usr/keychars/qwerty2.kcm \
+    device/htc/primoc/keychars/Virtual.kcm:system/usr/keychars/Virtual.kcm \
+    device/htc/primoc/keylayout/himax-touchscreen.kl:system/usr/keylayout/himax-touchscreen.kl \
+    device/htc/primoc/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+    device/htc/primoc/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
+    device/htc/primoc/keylayout/primoc-keypad.kl:system/usr/keylayout/primoc-keypad.kl \
+    device/htc/primoc/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
+    device/htc/primoc/keylayout/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl
 
 # Input device config
 PRODUCT_COPY_FILES += \
-    device/htc/primoc/prebuilt/usr/idc/himax-touchscreen.idc:system/usr/idc/himax-touchscreen.idc \
-    device/htc/primoc/prebuilt/usr/idc/primoc-keypad.idc:system/usr/idc/primoc-keypad.idc \
-    device/htc/primoc/prebuilt/usr/idc/qwerty.idc:system/usr/idc/qwerty.idc \
-    device/htc/primoc/prebuilt/usr/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
-    device/htc/primoc/prebuilt/usr/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc
+    device/htc/primoc/idc/himax-touchscreen.idc:system/usr/idc/himax-touchscreen.idc \
+    device/htc/primoc/idc/primoc-keypad.idc:system/usr/idc/primoc-keypad.idc \
+    device/htc/primoc/idc/qwerty.idc:system/usr/idc/qwerty.idc \
+    device/htc/primoc/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
+    device/htc/primoc/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc
 
 # Sensors
 PRODUCT_PACKAGES += \

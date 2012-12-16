@@ -31,7 +31,7 @@ PRODUCT_COPY_FILES += \
 
 # Vold
 PRODUCT_COPY_FILES += \
-    device/htc/primoc/prebuilt/etc/vold.fstab:system/etc/vold.fstab
+    device/htc/primoc/vold.fstab:system/etc/vold.fstab
 
 # Keylayouts and keychars
 PRODUCT_COPY_FILES += \

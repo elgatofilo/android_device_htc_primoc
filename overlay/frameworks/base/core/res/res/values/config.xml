@@ -166,11 +166,11 @@
         <item>7</item>
     </integer-array>
 
-	<!-- Set to true if the RSSI should always display CDMA signal
+    <!-- Set to true if the RSSI should always display CDMA signal
          strength even on EVDO -->
     <bool name="config_alwaysUseCdmaRssi">true</bool>
-	
-	    <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
+
+    <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
     <bool translatable="false" name="config_wifi_dual_band_support">true</bool>
 
     <!-- Boolean indicating whether the wifi chipset has background scan support -->
@@ -189,24 +189,24 @@
     <bool name="config_autoBrightnessButtonKeyboard">false</bool>
 
     <!-- Values greater or equal to 0 will enable electronbeam screen-on
-animation with the specified delay (in milliseconds), -1 will disable the animation -->
+         animation with the specified delay (in milliseconds), -1 will disable the animation -->
     <integer name="config_screenOnAnimation">-1</integer>
-	<bool name="config_screenOffAnimation">false</bool>
-	<bool name="config_animateScreenLights">false</bool>
-	
-	<!-- Vibrator pattern for feedback about touching a virtual key -->
+    <bool name="config_screenOffAnimation">false</bool>
+    <bool name="config_animateScreenLights">false</bool>
+
+    <!-- Vibrator pattern for feedback about touching a virtual key -->
     <integer-array name="config_virtualKeyVibePattern">
         <item>40</item>
     </integer-array>
-	
+
     <!-- If true, the screen can be rotated via the accelerometer in all 4
     rotations as the default behavior. -->
     <bool name="config_allowAllRotations">true</bool>
-	
+
     <!-- The VoiceMail default value is displayed to my own number if it is true -->
     <bool name="config_telephony_use_own_number_for_voicemail">true</bool>
 
     <!-- Testing bluetooth wake lock problem -->
     <bool name="config_bluetooth_adapter_quick_switch">false</bool>
-	
+
 </resources>

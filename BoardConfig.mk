@@ -1,4 +1,4 @@
-# Copyright (C) 2009 The Android Open Source Project
+# Copyright (C) 2012 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,44 +23,21 @@
 # WARNING: This line must come *before* including the proprietary
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
-USE_CAMERA_STUB := true
 
 # inherit from common msm7x30
 -include device/htc/msm7x30-common/BoardConfigCommon.mk
 
-# inherit from the proprietary version
--include vendor/htc/primoc/BoardConfigVendor.mk
-
+# Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := primoc
 
-BOARD_KERNEL_CMDLINE := no_console_suspend=1
+# Kernel
 BOARD_KERNEL_BASE := 0x14300000
 BOARD_KERNEL_PAGE_SIZE := 4096
+BOARD_KERNEL_CMDLINE := no_console_suspend=1
+TARGET_KERNEL_CONFIG := primoc_defconfig
 
-TARGET_USE_SCORPION_BIONIC_OPTIMIZATION := true
-TARGET_USE_SCORPION_PLD_SET := true
-TARGET_SCORPION_BIONIC_PLDOFFS := 6
-TARGET_SCORPION_BIONIC_PLDSIZE := 128
-
+# GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := primoc
-BOARD_VENDOR_QCOM_AMSS_VERSION := 1200
-BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
-
-TARGET_PROVIDES_LIBLIGHTS := true
-BOARD_USES_LEGACY_RIL := true
-
-BOARD_HAVE_HTC_FFC := true
-BOARD_USE_REVERSE_FFC := true
-
-COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DSCREEN_RELEASE -DREFRESH_RATE=60 -DICS_CAMERA_BLOB -DRIL_VERSION_2_SUPPORT -DQCOM_NO_SECURE_PLAYBACK
-
-BOARD_PREBUILT_LIBAUDIO := false
-BOARD_USES_QCOM_AUDIO_VOIPMUTE := false
-BOARD_USES_QCOM_AUDIO_RESETALL := false
-BOARD_ADRENO_DECIDE_TEXTURE_TARGET := true
-ARCH_ARM_HAVE_NEON := true
-TARGET_USES_PMEM := true
-BOARD_NEEDS_MEMORYHEAPPMEM := true
 
 # Wifi related defines
 WIFI_BAND                        := 802_11_ABG
@@ -86,25 +63,16 @@ WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path
 #mmcblk0p28: 014bfe00 00000200 "devlog"
 #mmcblk0p29: 00040000 00000200 "pdata"
 
+# Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 585101312
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 1232072704
 BOARD_BOOTIMAGE_PARTITION_SIZE := 4194304
+BOARD_RECOVERYIMAGE_PARTITIONSIZE := 8909824
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 585104896
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 1232076288
 BOARD_FLASH_BLOCK_SIZE := 262144
 
-TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
-
-TARGET_KERNEL_SOURCE := kernel/htc/primoc
-TARGET_KERNEL_CONFIG := primoc_defconfig
-TARGET_PREBUILT_KERNEL := device/htc/primoc/prebuilt/root/kernel
-
-BOARD_HAS_LARGE_FILESYSTEM := true
-BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
-BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1
-BOARD_USES_MMCUTILS := false
-BOARD_HAS_NO_MISC_PARTITION := false
-
+# Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun0/file
+# Use power button as select in recovery
+BOARD_HAS_NO_SELECT_BUTTON := true

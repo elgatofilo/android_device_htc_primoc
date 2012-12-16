@@ -69,3 +69,6 @@ lib/libqmi.so
 lib/libhtc_ril.so
 lib/libnetmgr.so
 lib/libqc-opt.so
+
+# Wifi
+etc/calibration

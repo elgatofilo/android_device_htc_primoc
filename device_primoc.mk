@@ -50,6 +50,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     sensors.primoc
 
+# WiFi firmware
+$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4330/device-bcm.mk)
+
 # Carrier Info
 CDMA_GOOGLE_BASE := android-sprint-us
 CDMA_CARRIER_ALPHA := Virgin_Mobile

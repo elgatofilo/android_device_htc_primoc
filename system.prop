@@ -9,3 +9,6 @@ ro.ril.disable.power.collapse=1
 
 # USB
 persist.sys.usb.config=mass_storage,adb
+
+# Use EMMC
+ro.emmc=true

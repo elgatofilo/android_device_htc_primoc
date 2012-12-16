@@ -12,6 +12,9 @@ etc/firmwrae/default_org_wb.acdb
 lib/libaudioalsa.so
 lib/libhtc_acoustic.so
 
+# Bluetooth firmware
+etc/firmware/bcm4330.hcd
+
 # Camera
 lib/libcamera.so
 lib/libgemini.so
